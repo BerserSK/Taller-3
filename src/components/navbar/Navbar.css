@@ -1,0 +1,259 @@
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "menu";
+    font-family: 'Marcellus',serif;
+    font-size: 1.3em;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.logo{
+    grid-area: logo;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: "logo-img menu-bars";
+    background-color: var(--negro2);
+    padding: 1rem;
+}
+
+.logo img{
+    grid-area: logo-img;
+    width: 50%;
+    max-width: 200px;
+}
+
+.logo i{
+    grid-area: menu-bars;
+    color: var(--blanco);
+    font-size: 2em;
+    justify-self: end;
+    align-self: center;
+}
+
+.menu{
+    background-color: rgba(1, 10, 52, 0.838);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    display: none;
+}
+
+.menu-hr{
+    color: var(--blanco);
+    width: 90%;
+    justify-self: center;
+}
+
+.item{
+    padding: 1rem 0;
+}
+
+nav a{
+    color: var(--blanco);
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: #0b3860;
+    width: 100%;
+}
+
+.navbar-button{
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    padding: 0.5rem;
+    font-family: 'Marcellus', serif;
+    color: var(--blanco);
+}
+
+/*Resoluciones macro*/
+@media screen and (min-width: 1308px){
+    body{
+        background-color: #eaeaea;
+    }
+    #container-grid{
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    nav{
+        width: 100%;
+        max-width: 1300px;
+    }
+
+    .body-form{
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    #banner .line1{
+        left: 605px;
+        width: 3%;
+    }
+
+    #banner .line2{
+        left: 655px;
+        width: 3%;
+        top: 297px;
+    }
+
+    #banner .line3{
+        left: 705px;
+        width: 3%;
+        top: 291px;
+    }
+
+    #banner .back{
+        height: 110px;
+        top: 290px;
+    }
+
+    #banner .first-h3{
+        top: 290px;
+        font-size: 2rem;
+    }
+
+    .social-bar{
+        font-size: 2rem;
+    }
+
+    #descripcion img{
+        display: block;
+        width: 125px;
+        position: relative;
+        right: 44px;
+        bottom: 12px;
+    }
+
+    #descripcion p{
+        padding: 0 5rem 2rem 0;
+    }
+
+    #ubicacion .maps iframe{
+        width: 100%;
+    }
+
+    #opinion{
+        display: flex;
+    }
+
+    #opinion .cards{
+        width: 30%;
+    }
+
+    #opinion .carta1{
+        right: 45px;
+    }
+
+    #opinion .carta2{
+        display: block;
+    }
+
+    #opinion .carta3{
+        display: block;
+        left: 45px;
+    }
+
+    #opinion .carta2 .rating .star1{
+        color: var(--blanco);
+    }
+
+    #opinion .carta3 .rating .star1,
+    #opinion .carta3 .rating .star2,
+    #opinion .carta3 .rating .star3{
+        color: var(--magenta);
+    }
+
+    .line4{
+        left: 550px;
+        width: 4%;
+    }
+
+    .line5{
+        left: 615px;
+        width: 4%;
+    }
+
+    .line6{
+        left: 680px;
+        width: 4%;
+    }
+
+    footer{
+        justify-content: space-between;
+    }
+
+    footer hr{
+        display: none;
+    }
+
+    footer .descripcion-footer{
+        padding: 0 59rem 1rem .7rem;
+        position: absolute;
+    }
+
+    footer .contactos{
+        padding: 0.5rem 0 0.5rem 0;
+        position: relative;
+        left: 500px;
+    }
+
+    footer .politicas{
+        display: block;
+        left: 1000px;
+        position: absolute;
+    }
+
+    footer .politica{
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    nav{
+        background-color: var(--negro2);
+        grid-template-columns: 200px auto;
+        grid-template-areas: 
+        "logo menu";
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .logo i{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        background-color: var(--negro2);
+        justify-self: end;
+        align-self: center;
+        padding: 0 1rem;
+    }
+
+    .menu-hr{
+        display: none;
+    }
+
+    .navbar-button{
+        background-color: var(--azuloscuro);
+        align-self: center;
+    }
+
+    .item{
+        padding: 1rem;
+    }
+
+}
