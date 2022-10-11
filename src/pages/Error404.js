@@ -1,7 +1,9 @@
+import Er404 from "../components/error404/Er404";
+
 function Error404(){
     return(
         <>
-            Error404 la pagina que intentas acceder no esta disponible
+            <Er404/>
         </>
     )
 }
